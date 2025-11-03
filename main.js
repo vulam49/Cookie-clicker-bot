@@ -134,22 +134,6 @@ function automateCookieClicker() {
 		}, 1);
 
     Lumps = setInterval(function() {
-        Game.ObjectsById[Math.floor(Math.random() * 13)].levelUp()
+        Game.ObjectsById[Math.floor(Math.random() * 20)].levelUp()
     });
 }
-
-function stopAutomation() {
-    clearInterval(cookieClickerInterval);
-    clearInterval(buildingPurchaseInterval);
-    clearInterval(upgradePurchaseInterval);
-    clearInterval(goldenCookieInterval);
-    clearInterval(ascensionCheckInterval);
-    clearInterval(ascendUpgradeInterval);
-		clearInterval(wrinklerInterval);
-}
-
-// Start the automation
-automateCookieClicker();
-
-// Use this function to stop the automation
-// stopAutomation();
