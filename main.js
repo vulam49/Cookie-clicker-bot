@@ -1,12 +1,26 @@
-var cookieClickerInterval;
-var buildingPurchaseInterval;
-var upgradePurchaseInterval;
-var goldenCookieInterval;
-var ascensionCheckInterval;
-var ascendUpgradeInterval;
-var wrinklerInterval;
-var Lumps;
-'use strict';
+if(CCbot === undefined) var CCbot = {};
+CCbot.name = 'Cookie Clicker Bot';
+CCbot.version = '1.0';
+CCbot.GameVersion = '2.052';
+
+CCbot.launch = function(){
+	var cookieClickerInterval;
+	var buildingPurchaseInterval;
+	var upgradePurchaseInterval;
+	var goldenCookieInterval;
+	var ascensionCheckInterval;
+	var ascendUpgradeInterval;
+	var wrinklerInterval;
+	var Lumps;
+
+	CCbot.init = function(){
+		CCbot.isLoaded = 1;
+		CCbot.Backup = {};
+		CCbot.initCodes();
+		CCbot.setPercentagePrecision(4);
+		CCbot.plantStatus = {};
+		CCbot.unlockables = {};
+		CCbot.unlockableCount = 0;
 
 function automateCookieClicker() {
     // Define the cookie's approximate radius and center coordinates
@@ -138,3 +152,10 @@ function automateCookieClicker() {
         Game.ObjectsById[Math.floor(Math.random() * 20)].levelUp()
     });
 }
+}
+
+
+if(!CCbot.isLoaded){
+	CCbot.launch();
+	}
+
