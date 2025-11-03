@@ -6,6 +6,7 @@ var ascensionCheckInterval;
 var ascendUpgradeInterval;
 var wrinklerInterval;
 var Lumps;
+'use strict';
 
 function automateCookieClicker() {
     // Define the cookie's approximate radius and center coordinates
@@ -30,7 +31,7 @@ function automateCookieClicker() {
          else {
             clearInterval(cookieClickerInterval);
         }
-    }, 0.000000000000000000000000000000000000000000000001);
+    }, 0.001);
 
     buildingPurchaseInterval = setInterval(function() {
         if (!Game.OnAscend) {
